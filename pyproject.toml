@@ -1,7 +1,22 @@
 [project]
 name = "leetgpu"
 version = "0.1.0"
-description = "Add your description here"
+description = "CUDA practice exercises for GPU LeetCode-style problems"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+]
+
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+torchaudio = { index = "pytorch" }
